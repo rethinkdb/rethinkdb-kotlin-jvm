@@ -3,6 +3,7 @@ import java.io.File
 import com.jfrog.bintray.gradle.BintrayExtension
 import com.jfrog.bintray.gradle.tasks.BintrayUploadTask
 import com.jfrog.bintray.gradle.tasks.RecordingCopyTask
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.3.70"
@@ -12,7 +13,7 @@ plugins {
     id("com.jfrog.bintray") version "1.8.4"
 }
 
-version = "2.4.1.1"
+version = "2.4.0"
 group = "com.rethinkdb"
 
 repositories {
@@ -43,8 +44,8 @@ tasks {
     val doSigning by creating {
         dependsOn("signArchives")
     }
-    withType<JavaCompile> {
-        options.encoding = "UTF-8"
+    withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = "1.8"
     }
     val sourcesJar by creating(Jar::class) {
         group = "build"
@@ -133,7 +134,7 @@ tasks {
             artifactId = project.name
             version = project.version.toString()
 
-            from(project.components["java"])
+            from(project.components["kotlin"])
             artifact(sourcesJar)
             artifact(javadocJar)
 
