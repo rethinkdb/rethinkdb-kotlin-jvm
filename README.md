@@ -1,5 +1,6 @@
 # RethinkDB Kotlin/JVM Extensions
 
+[![Maven Central](https://img.shields.io/maven-central/v/com.rethinkdb/rethinkdb-kotlin-jvm)](https://search.maven.org/artifact/com.rethinkdb/rethinkdb-kotlin-jvm)
 [![Travis-CI.org](https://img.shields.io/travis/rethinkdb/rethinkdb-kotlin-jvm)](https://travis-ci.org/rethinkdb/rethinkdb-kotlin-jvm)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Frethinkdb%2Frethinkdb-kotlin-jvm)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Frethinkdb%2Frethinkdb-kotlin-jvm)
 
